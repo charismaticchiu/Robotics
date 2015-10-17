@@ -1,0 +1,25 @@
+Options for ArRobotConnector (see docs for more details):
+
+Robot options:
+-remoteHost <remoteHostNameOrIP>
+-rh <remoteHostNameOrIP>
+-robotPort <robotSerialPort>
+-rp <robotSerialPort>
+-robotBaud <baud>
+-rb <baud>
+-remoteRobotTcpPort <remoteRobotTcpPort>
+-rrtp <remoteRobotTcpPort>
+-remoteIsSim
+-ris
+-robotLogPacketsReceived
+-rlpr
+-robotLogPacketsSent
+-rlps
+-robotLogMovementReceived
+-rlmr
+-robotLogMovementSent
+-rlms
+-robotLogVelocitiesReceived
+-rlvr
+-robotLogActions
+-rla

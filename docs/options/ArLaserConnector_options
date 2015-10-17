@@ -1,0 +1,78 @@
+Laser types and options may also be set in the robot parameter file.  See the
+ARIA reference documentation for details.
+
+If a program supports multiple lasers, then options for additional lasers
+after the first are given by appending the laser number (e.g. -laserType2)
+To enable use of a laser, choose its type with the -laserType<N> options
+(e.g.: -laserType lms2xx -laserType2 urg)
+
+The default laser type for the primary laser (laser 1) is "lms2xx".
+
+Instruct a program to connect to a laser using the -connectLaser<N> option;
+if a program requires use of a laser it usually always attempts to connect to
+the primary laser, however.
+
+The index number is optional in options for the primary laser (laser 1).
+
+
+
+For laser type "lms2xx":
+
+-laserPort <laserPort>
+-lp <laserPort>
+-laserPortType <serial|tcp>
+-lpt <serial|tcp>
+-remoteLaserTcpPort <remoteLaserTcpPort>
+-rltp <remoteLaserTcpPort>
+-laserFlipped <true|false>
+-lf <true|false>
+-laserMaxRange <maxRange>
+-lmr <maxRange>
+	<maxRange> is an unsigned int less than 32000
+-laserDegrees <100|180>
+-ld <100|180>
+-laserIncrement <half|one>
+-li <half|one>
+-laserUnits <1mm|1cm|10cm>
+-lu <1mm|1cm|10cm>
+-laserReflectorBits <1ref|2ref|3ref>
+-lrb <1ref|2ref|3ref>
+-laserPowerControlled <true|false>
+-lpc <true|false>
+-laserStartingBaud <9600|19200|38400>
+-lsb <9600|19200|38400>
+-laserAutoBaud <9600|19200|38400>
+-lab <9600|19200|38400>
+-laserAdditionalIgnoreReadings <readings>
+-lair <readings>
+	<readings> is a string that contains readings to ignore separated by commas, where ranges are acceptable with a -, example '75,76,90-100,-75,-76,-90--100'
+
+For laser type "urg":
+
+-laserPort <laserPort>
+-lp <laserPort>
+-laserPortType <serial|tcp>
+-lpt <serial|tcp>
+-remoteLaserTcpPort <remoteLaserTcpPort>
+-rltp <remoteLaserTcpPort>
+-laserFlipped <true|false>
+-lf <true|false>
+-laserMaxRange <maxRange>
+-lmr <maxRange>
+	<maxRange> is an unsigned int less than 4095
+-laserDegreesStart <startAngle>
+-lds <startAngle>
+	<startAngle> is a double between -135 and 135
+-laserDegreesEnd <endAngle>
+-lde <endAngle>
+	<endAngle> is a double between -135 and 135
+-laserIncrementByDegrees <incrementByDegrees>
+-libd <incrementByDegrees>
+	<incrementByDegrees> is a double between 0 and 135
+-laserStartingBaud <019200|057600|115200|250000|500000|750000>
+-lsb <019200|057600|115200|250000|500000|750000>
+-laserAutoBaud <019200|057600|115200|250000|500000|750000>
+-lab <019200|057600|115200|250000|500000|750000>
+-laserAdditionalIgnoreReadings <readings>
+-lair <readings>
+	<readings> is a string that contains readings to ignore separated by commas, where ranges are acceptable with a -, example '75,76,90-100,-75,-76,-90--100'
